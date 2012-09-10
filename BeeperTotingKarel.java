@@ -27,4 +27,9 @@ public class BeeperTotingKarel extends Karel {
 		turnLeft();
 		turnLeft();
 	}
+	
+	private void turnAround() {
+		turnLeft();
+		turnLeft();
+	}
 }

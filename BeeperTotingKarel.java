@@ -22,12 +22,18 @@ public class BeeperTotingKarel extends Karel {
 		move();
 	}
 	
+	/**
+	 * Turns Karel 90 degrees to the right.
+	 */
 	private void turnRight() {
 		turnLeft();
 		turnLeft();
 		turnLeft();
 	}
 	
+	/**
+	 * Turns Karel 180 degrees.
+	 */
 	private void turnAround() {
 		turnLeft();
 		turnLeft();

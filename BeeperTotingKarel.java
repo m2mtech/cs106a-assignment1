@@ -8,7 +8,7 @@
 
 import stanford.karel.*;
 
-public class BeeperTotingKarel extends Karel {
+public class BeeperTotingKarel extends NewImprovedKarel {
 	public void run() {
 		move();
 		pickBeeper();
@@ -20,22 +20,5 @@ public class BeeperTotingKarel extends Karel {
 		move();
 		putBeeper();
 		move();
-	}
-	
-	/**
-	 * Turns Karel 90 degrees to the right.
-	 */
-	private void turnRight() {
-		turnLeft();
-		turnLeft();
-		turnLeft();
-	}
-	
-	/**
-	 * Turns Karel 180 degrees.
-	 */
-	private void turnAround() {
-		turnLeft();
-		turnLeft();
 	}
 }

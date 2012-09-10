@@ -15,12 +15,16 @@ public class BeeperTotingKarel extends Karel {
 		move();
 		turnLeft();
 		move();
-		turnLeft();
-		turnLeft();
-		turnLeft();
+		turnRight();
 		move();
 		move();
 		putBeeper();
 		move();
-	} 
+	}
+	
+	private void turnRight() {
+		turnLeft();
+		turnLeft();
+		turnLeft();
+	}
 }

@@ -38,14 +38,18 @@ public class CleanupKarel extends SuperKarel {
 				pickBeeper();
 			} 
 		}
-		/* Reposition Karel at far East wall to face West on next row */ private void repositionForRowToWest() {
-			turnLeft();
-			move();
-			turnLeft();
-		}
-		/* Reposition Karel at far West wall to face East on next row */ private void repositionForRowToEast() {
-		}
+	}
+	
+	/* Reposition Karel at far East wall to face West on next row */ 
+	private void repositionForRowToWest() {
+		turnLeft();
+		move();
+		turnLeft();
+	}
+	/* Reposition Karel at far West wall to face East on next row */ 
+	private void repositionForRowToEast() {
 		turnRight();
 		move();
 		turnRight();
-	} }
+	}
+}

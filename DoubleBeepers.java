@@ -13,5 +13,16 @@ public class DoubleBeepers extends SuperKarel {
 		DoubleBeepersInPile();
 		moveBackward();
 	}
-	
-	
+
+	/*
+	 * For every beeper on the current corner, Karel places
+	 * two beepers on the corner immediately ahead of him. 
+	 */
+	private void DoubleBeepersInPile() {
+		while (beepersPresent()) {
+			pickBeeper();
+			PutTwoBeepersNextDoor();
+		}
+		MovePileNextDoorBack();	
+	}
+}

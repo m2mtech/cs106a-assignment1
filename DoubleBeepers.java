@@ -26,7 +26,49 @@ public class DoubleBeepers extends SuperKarel {
 		MovePileNextDoorBack();	
 	}
 
+	/*
+	 * Place two beepers on corner one avenue ahead of Karel
+	 * and move back to starting position/orientation 
+	 */
+	private void PutTwoBeepersNextDoor() {
+		move();
+		putBeeper();
+		putBeeper();
+		moveBackward();
+	}
 
+	/*
+	 * Move all the beepers on the corner in front of Karel
+	 * the the corner Karel is currently on.
+	 */
+	private void MovePileNextDoorBack() {
+		move();
+		while (beepersPresent()) {
+			MoveOneBeeperBack();
+		}
+		moveBackward();
+	}
 
+	/*
+	 * Move one beeper from the current corner back one avenue 
+	 * and return to the original position/orientation.
+	 */
+	private void MoveOneBeeperBack() {
+		pickBeeper();
+		moveBackward();
+		putBeeper();
+		move();
+	}
+
+	/*
+	 * Move Karel back one avenue, but have the same
+	 * final orientation.
+	 */
+	private void moveBackward() {
+		turnAround();
+		move();
+		turnAround();
+	}
 
 }
+

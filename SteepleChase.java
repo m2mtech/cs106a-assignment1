@@ -1,4 +1,4 @@
-￼￼/*
+/*
  * File: SteepleChase.java
  * -----------------------
  * Karel runs a steeple chase the is 9 avenues long. 

@@ -10,7 +10,8 @@ public class RoadRepairKarel extends SuperKarel {
 		while (frontIsClear()) {
 			move();
 			fillPothole();
-			move(); }
+			move(); 
+		}
 	}
 	/**
 	 * Fills the hole beneath Karel's current position by

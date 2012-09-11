@@ -6,12 +6,15 @@
  * the problem so that it makes use of a fillPothole method.
  */
 import stanford.karel.*;
+
 public class PotholeFillingKarel extends SuperKarel {
+
 	public void run() {
 		move();
 		fillPothole();
 		move();
 	}
+
 	/**
 	 * Fills the pothole beneath Karel's current position by
 	 * placing a beeper on that corner.  For this method to
@@ -28,4 +31,5 @@ public class PotholeFillingKarel extends SuperKarel {
 		move();
 		turnRight();
 	} 
+
 }

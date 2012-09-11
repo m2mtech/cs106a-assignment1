@@ -7,7 +7,9 @@
  * of its own.
  */
 import stanford.karel.*;
+
 public class NewImprovedKarel extends Karel {
+
 	/**
 	 * Turns Karel 90 degrees to the right.
 	 */
@@ -16,6 +18,7 @@ public class NewImprovedKarel extends Karel {
 		turnLeft();
 		turnLeft();
 	}
+
 	/**
 	 * Turns Karel around 180 degrees.
 	 */
@@ -23,4 +26,5 @@ public class NewImprovedKarel extends Karel {
 		turnLeft();
 		turnLeft();
 	}
+
 }

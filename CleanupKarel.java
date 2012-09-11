@@ -4,7 +4,6 @@
  * Karel starts at (1, 1) facing East and cleans up any
  * beepers scattered throughout his world.
  */
-
 import stanford.karel.*;
 
 public class CleanupKarel extends SuperKarel {

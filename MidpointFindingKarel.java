@@ -9,7 +9,6 @@
  * stops.  The world may be of any size, but you are allowed to
  * assume that it is at least as tall as it is wide.
  */
-
 import stanford.karel.*;
 
 /*

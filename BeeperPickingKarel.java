@@ -6,7 +6,6 @@
  * commands cause Karel to move forward one block, pick up
  * a beeper, and then move ahead to the next corner.
  */
-
 import stanford.karel.*;
 
 public class BeeperPickingKarel extends Karel {

@@ -7,7 +7,6 @@
  * you should be sure to edit this comment so that it no longer
  * indicates that the program does nothing.
  */
-
 import stanford.karel.*;
 
 /*

@@ -5,8 +5,7 @@
  * so that Karel picks up a beeper from 1st Street and then
  * carries that beeper to the center of a ledge on 2nd Street.
  */
-
-import stanford.karel.*;
+//import stanford.karel.*;
 
 public class BeeperTotingKarel extends NewImprovedKarel {
 	public void run() {

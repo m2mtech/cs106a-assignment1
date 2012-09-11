@@ -5,7 +5,9 @@
  * arbitrary sequence of potholes in a roadway.
  */
 import stanford.karel.*;
+
 public class RoadRepairKarel extends SuperKarel {
+
 	public void run() {
 		while (frontIsClear()) {
 			checkForPothole();
@@ -13,6 +15,7 @@ public class RoadRepairKarel extends SuperKarel {
 		}
 		checkForPothole();
 	}
+
 	/**
 	 * Checks for a pothole immediately beneath Karel's current
 	 * looking for a wall to the right.  If a pothole exists,
@@ -23,6 +26,7 @@ public class RoadRepairKarel extends SuperKarel {
 			fillPothole();
 		}
 	}
+
 	/**
 	 * Fills the pothole beneath Karel's current position by
 	 * placing a beeper on that corner.  For this method to
@@ -43,4 +47,5 @@ public class RoadRepairKarel extends SuperKarel {
 		move();
 		turnRight();
 	} 
+
 }

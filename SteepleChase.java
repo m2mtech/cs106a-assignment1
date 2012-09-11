@@ -4,7 +4,6 @@
  * Karel runs a steeple chase the is 9 avenues long. 
  * Hurdles are of arbitrary height and placement.
  */
-
 import stanford.karel.*;
 
 public class SteepleChase extends SuperKarel {

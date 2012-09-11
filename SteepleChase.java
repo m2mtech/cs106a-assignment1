@@ -48,7 +48,8 @@ public class SteepleChase extends SuperKarel {
 
 	/*
 	 * Pre-condition: Facing East above and immediately after hurdle
-	 * Post-condition: Facing East at bottom of hurdle */
+	 * Post-condition: Facing East at bottom of hurdle 
+	 */
 	private void descendHurdle() {
 		turnRight();
 		moveToWall();
@@ -57,11 +58,13 @@ public class SteepleChase extends SuperKarel {
 
 	/*
 	 * Pre-condition:  none
-	 * Post-condition: Facing first wall in whichever direction * Karel was facing previously
+	 * Post-condition: Facing first wall in whichever direction 
+	 * Karel was facing previously
 	 */
 	private void moveToWall() {
 		while (frontIsClear()) {
-			move(); }
+			move(); 
+		}
 	}
 	
 }

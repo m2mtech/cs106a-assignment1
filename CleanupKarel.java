@@ -26,7 +26,9 @@ public class CleanupKarel extends SuperKarel {
 			} 
 		}
 	}
-	/* Cleans up a row in whichever direction Karel is facing */ private void cleanRow() {
+	
+	/* Cleans up a row in whichever direction Karel is facing */ 
+	private void cleanRow() {
 		if (beepersPresent()) {
 			pickBeeper();
 		}
@@ -34,7 +36,8 @@ public class CleanupKarel extends SuperKarel {
 			move();
 			if (beepersPresent()) {
 				pickBeeper();
-			} }
+			} 
+		}
 		/* Reposition Karel at far East wall to face West on next row */ private void repositionForRowToWest() {
 			turnLeft();
 			move();

@@ -46,6 +46,7 @@ public class CleanupKarel extends SuperKarel {
 		move();
 		turnLeft();
 	}
+	
 	/* Reposition Karel at far West wall to face East on next row */ 
 	private void repositionForRowToEast() {
 		turnRight();

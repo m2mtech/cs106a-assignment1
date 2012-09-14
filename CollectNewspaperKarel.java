@@ -17,7 +17,39 @@ import stanford.karel.*;
 public class CollectNewspaperKarel extends SuperKarel {
 
 	public void run() {
-		// You fill in this part
+		moveToNewspaper();
+		pickUpNewspaper();
+		returnToStartingPoint();
+	}
+	
+	private void moveToNewspaper() {
+		while(frontIsClear()) {
+			move();
+		}
+		turnRight();
+		while(leftIsBlocked()) {
+			move();
+		}
+		turnLeft();
+		move();
+	}
+
+	private void pickUpNewspaper() {
+		if (beepersPresent()) {
+			pickBeeper();
+		}
+	}
+
+	private void returnToStartingPoint() {
+		turnAround();
+		while(frontIsClear()) {
+			move();
+		}
+		turnRight();
+		while(frontIsClear()) {
+			move();
+		}
+		turnRight();		
 	}
 
 }

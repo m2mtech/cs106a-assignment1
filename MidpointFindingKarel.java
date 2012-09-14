@@ -18,8 +18,96 @@ import stanford.karel.*;
 
 public class MidpointFindingKarel extends SuperKarel {
 
+	/*
+	 * Pre-condition:  Facing East at bottom left corner
+	 * Post-condition: At midpoint
+	 */
 	public void run() {
-		// You fill in this part
+		moveUp();
+		searchWall();
+		while (beepersPresent()) {
+			searchWall();
+		}
+		moveDown();
+		putBeeper();
+		cleanUp();
+	}
+	
+	/*
+	 * Pre-condition:  Facing East or West
+	 * Post-condition: Facing East or West, one row above
+	 */
+	private void moveUp() {
+		if (facingEast()) {
+			turnLeft();
+			move();
+			turnRight();			
+		} else {
+			turnRight();						
+			move();
+			turnLeft();
+		}
 	}
 
+	/*
+	 * Pre-condition:  Facing East or West
+	 * Post-condition: Facing East or West, one row below
+	 */
+	private void moveDown() {
+		if (facingEast()) {
+			turnRight();
+			move();
+			turnLeft();			
+		} else {
+			turnLeft();
+			move();
+			turnRight();			
+		}
+	}
+
+	/*
+	 * Pre-condition:  Facing East or West "at edge of markings"
+	 * Post-condition: Facing other direction one step inside markings 
+	 *                 with beeper present if middle not reached yet
+	 */
+	private void searchWall() {
+		if (frontIsClear()) {
+			move();
+		}
+		while(frontIsClear() && noBeepersPresent()) {
+			move();
+		}
+		turnAround();
+		if (frontIsClear()) {
+			move();
+			if (beepersPresent()) {
+				pickBeeper(); // finished !!!
+			} else {
+				putBeeper();
+			}			
+		}
+	}
+	
+	/*
+	 * Pre-condition:  Midpoint in first row
+	 * Post-condition: Midpoint in first row
+	 */
+	private void cleanUp() {
+		moveUp();
+		while (frontIsClear()) {
+			move();
+			if (beepersPresent()) pickBeeper();
+		}
+		turnAround();
+		while (frontIsClear()) {
+			move();
+			if (beepersPresent()) pickBeeper();
+		}
+		moveDown();
+		turnAround();
+		while (frontIsClear() && noBeepersPresent()) {
+			move();
+		}
+	}
+	
 }
